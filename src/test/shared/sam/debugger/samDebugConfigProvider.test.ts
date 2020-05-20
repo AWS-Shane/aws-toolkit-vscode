@@ -1029,7 +1029,6 @@ describe('createTemplateAwsSamDebugConfig', () => {
 
     it('creates a template-type SAM debugger configuration with minimal configurations', () => {
         const config = createTemplateAwsSamDebugConfig(undefined, undefined, name, templatePath)
-        const invokeTarget = config.invokeTarget as TemplateTargetProperties
         assert.deepStrictEqual(config, {
             name: `yellow:${name}`,
             type: AWS_SAM_DEBUG_TYPE,
